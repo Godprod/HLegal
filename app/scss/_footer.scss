@@ -1,0 +1,305 @@
+.footer {
+    background-color: $bg_color;
+    padding: 0 0 30px;
+
+    &__services {
+        padding-top: 30px;
+    }
+
+    &__container {
+        padding: 0 30px;
+        
+        }
+        
+    
+
+    &__line {
+        background: $separator_color;
+        height: 4px;
+        border: none;
+        margin: 0 0 30px;
+    }
+
+    // .footer__box
+
+    &__box {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        // justify-content: center;
+        // text-align: center;
+        @media screen and (min-width: $breakpoint-md) {
+
+        }
+    }
+
+    // .footer__box-items
+
+    &__box-items {
+        display: flex;
+        flex-flow: column;
+        flex: 1 1 100%;
+        &:last-child {
+            color: $text_color;
+        } 
+        text-align: center;
+        @media screen and (min-width: $breakpoint-md) {
+            flex-flow: row;
+            display: flex;
+            flex: 1 1 50%;  
+            &:first-child {
+                order: 1;
+                justify-content: flex-start;
+            }
+            &:nth-child(2) {
+                order: 3;
+                
+            }
+            &:last-child {
+                order: 2;
+                justify-content: flex-end;
+                color: $text_color;
+            } 
+            align-items: center;
+            column-gap: 26px;
+        }
+    }
+    
+
+
+		// .footer__box-tel
+
+		&__box-tel {
+            align-self: center;
+            padding: 10px 0;
+            text-decoration: none;
+            &:hover {
+                color: $accent_color;
+            }
+            display: block;
+            font-weight: 700;
+            line-height: 20px;
+            color: $alt_color;
+            @media screen and (min-width: $breakpoint-md) {
+                padding: 0;
+            }
+		}
+
+		// .footer__box-mail
+
+		&__box-mail {
+            align-self: center;
+            font-weight: 700;
+            line-height: 20px;
+            color: $regular_color;
+            
+            text-decoration: none;
+            &:hover {
+                color: $accent_color;
+            }
+            @media screen and (min-width: $breakpoint-md) {
+                padding: 0;
+            }
+		}
+
+
+
+
+    // .footer__box-adress
+
+    &__box-adress {
+        font-weight: 400;
+        line-height: 20px;
+        color: $main_color;
+        padding-bottom: 10px;
+        @media screen and (min-width: $breakpoint-md) {
+            align-self: start;
+            padding: 0;
+            position: relative;
+        &::before {
+            content: "";
+    position: absolute;
+    top: 50%;
+    right: -17px;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: $text_color;
+    border-radius: 50%;
+    pointer-events: none;
+        }
+        }
+    }
+
+    // .footer__box-map
+
+    &__box-map {
+        align-self: center;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $regular_color;
+        
+        &:hover {
+            color: $accent_color;
+        }
+        @media screen and (min-width: $breakpoint-md) {
+            padding: 0;
+            
+        }
+    }
+
+    // .footer__box-fb
+
+    &__box-fb {
+        align-self: center;
+        line-height: 0;
+        @media screen and (min-width: $breakpoint-md) {
+            align-self: start;
+        position: relative;
+        &::before {
+            content: "";
+    position: absolute;
+    top: 50%;
+    right: -17px;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: $text_color;
+    border-radius: 50%;
+    pointer-events: none;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -145px;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            background: $text_color;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+    }
+}
+
+    // .footer__box-icon
+
+    &__box-icon {
+        fill: $regular_color;
+        width: 38px;
+        height: 38px;
+        &:hover {
+            fill: $accent_color;
+        }
+    }
+		&__box-items-copywriting {
+            color: $text_color;
+		}
+
+            // .footer__box-services
+
+    &__box-services {
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: $breakpoint-lg) {
+            flex-direction: row;
+        }
+    }
+
+
+    // .footer__box-items-services
+
+    &__box-items-services {
+        @media screen and (min-width: $breakpoint-md) {
+            flex-flow: row;
+            display: flex;
+            flex: 1 1 50%;  
+            &:first-child {
+                order: 1;
+                justify-content: center;
+            }
+            &:nth-child(2) {
+                order: 2;
+                justify-content: center;
+                
+            }
+            &:last-child {
+                order: 3;
+                justify-content: center;
+                color: $text_color;
+            } 
+            align-items: center;
+            column-gap: 26px;
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            flex-flow: row;
+            display: flex;
+            flex: 1 1 50%;  
+            &:first-child {
+                order: 1;
+                justify-content: flex-start;
+            }
+            &:nth-child(2) {
+                order: 3;
+                justify-content: flex-start;
+                
+            }
+            &:last-child {
+                order: 2;
+                justify-content: flex-end;
+                color: $text_color;
+            } 
+            align-items: center;
+            column-gap: 26px;
+        }
+
+    }
+
+
+    // .footer__box-adress-services
+
+    &__box-adress-services {
+    }
+
+
+    // .footer__box-map-services
+
+    &__box-map-services {
+    }
+
+
+    // .footer__box-fb-services
+
+    &__box-fb-services {
+    }
+
+
+    // .footer__box-icon-services
+
+    &__box-icon-services {
+    }
+
+
+    // .footer__box-tel-services
+
+    &__box-tel-services {
+    }
+
+
+    // .footer__box-mail-services
+
+    &__box-mail-services {
+    }
+
+}
+
+
+
+
+
+

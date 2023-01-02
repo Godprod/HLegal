@@ -1,0 +1,85 @@
+body {
+	font-family: 'Montserrat';
+	font-weight: 400;
+}
+
+html, body {
+	scroll-behavior: smooth;
+  }
+
+.container {
+	// от 0px до 767px
+	padding: 0 30px;
+
+	@media screen and (min-width: $breakpoint-md) {
+		// от 768px включительно до 1023px
+		max-width: 648px;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+	@media screen and (min-width: $breakpoint-lg) {
+		// от 1024px включительно до 1443зpx
+		max-width: 904px;
+	}
+
+	@media screen and (min-width: $breakpoint-xl) {
+		// от 1440px включительно do 1919px
+		max-width: 1320px;
+	}
+
+	@media screen and (min-width: $breakpoint-xxl) {
+		// от 1920px включительно и до бесконечности
+		max-width: 1600px;
+	}
+}
+
+.main-title {
+	font-weight: 700;
+	font-size: 38px;
+	line-height: 46px;
+}
+
+.wrapper {
+	position: relative;
+	background: $gradient_supersoft;
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 20px;
+		right: 20px;
+		
+		height: 10px;
+		background: #CACADB;
+		z-index: 10;
+		border-bottom-left-radius: 12px;
+		border-bottom-right-radius: 12px;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -20px;
+		left: 40px;
+		right: 40px;
+		height: 10px;
+		
+		background: #E7E7F2;
+		z-index: 10;
+		border-bottom-left-radius: 12px;
+		border-bottom-right-radius: 12px;
+	}
+}
+
+::-webkit-scrollbar {
+	display: none; }
+
+.hidden {
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	position: absolute;
+	z-index: -1;
+}

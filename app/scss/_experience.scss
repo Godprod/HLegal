@@ -1,0 +1,183 @@
+.container__tabs {
+      position: relative;
+      align-items: center;
+      padding:0 30px 30px;
+      @media screen and (min-width: $breakpoint-md) {
+            padding:0 30px 0;
+      }
+    @media screen and (min-width: $breakpoint-lg) {
+      display: flex;
+      justify-content: center;
+      gap: 124px;
+      padding:0 30px 0;
+      &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 48.5%;
+            border-right: 4px solid rgba(255, 255, 255, 0.3);
+            height: 100%;
+            @media screen and (min-width: $breakpoint-xl) {
+                  left: 51.5%;
+                  height: 303px;
+            }
+            @media screen and (min-width: $breakpoint-xxl) {
+                  left: 49%;
+                }
+      
+      }
+}
+
+}
+.experience {
+padding: 30px 0 0;
+@media screen and (min-width: $breakpoint-md) {
+      padding: 60px 0 75px;
+}
+@media screen and (min-width: $breakpoint-xl) {
+      max-width: 1080px;
+}
+@media screen and (min-width: $breakpoint-xl) {
+      max-width: 1360px;
+}
+
+		// .experience__tabs
+
+		&__tabs {
+                  margin-right: -30px;
+                  
+                  @media screen and (min-width: $breakpoint-md) {
+                        margin-right: calc(-50vw + 324px)
+                        
+                  }
+                  @media screen and (min-width: $breakpoint-lg) {
+                        margin-right: 0px
+                  }
+            .active {
+                @include gradient_text;
+            }
+            position: relative;
+            display: flex;
+            overflow: scroll;
+            gap: 30px;
+            padding-bottom: 30px;
+            @media screen and (min-width: $breakpoint-md) {
+                  padding-bottom: 60px;
+            }
+            @media screen and (min-width: $breakpoint-lg) {
+                  overflow: visible;
+                  flex: 1 0 375px;
+                  width: 100%;
+                  flex-direction: column;
+                  align-items: flex-end;
+                  padding-bottom: 30px;
+            }
+      }
+      
+            &__line {
+                  background: rgba(255, 255, 255, 0.3);
+                  height: 4px;
+                  border: none;
+                  @media screen and (min-width: $breakpoint-lg) {
+                        display: none;
+                  }
+
+      }
+		// .experience__tabs-item
+
+		&__tabs-item {
+            flex-shrink: 0;
+            &:last-child {
+                  padding-right: 30px;
+                  }
+                  @media screen and (min-width: $breakpoint-md) {
+                        &:last-child {
+                              padding-right: 60px;
+                              }
+                  }
+            @media screen and (min-width: $breakpoint-lg) {
+                  white-space: nowrap;
+                  &:last-child {
+                        padding-right: 0px;
+                        }
+            }
+		}
+
+		// .experience__tabs-link
+
+		&__tabs-link {
+            position: relative;
+            font-size: 30px;
+            font-weight: 700;
+            color: $text_color;
+            text-decoration: none;
+            font-size: 38px;
+            font-weight: 700;
+            &.active {
+                  @include gradient_text;
+            }
+            &:hover {
+                  @include red_text;
+            }
+            @media screen and (min-width: $breakpoint-lg) {
+            }
+		}
+
+		// .experience__inner
+
+		&__inner {
+                  @media screen and (min-width: $breakpoint-md) {
+                        flex: 0 0 648px;
+                  }
+                  @media screen and (min-width: $breakpoint-lg) {
+                        flex: 1 0 405px;
+		}
+            @media screen and (min-width: $breakpoint-xl) {
+                  max-width: 581px;
+      }
+      @media screen and (min-width: $breakpoint-xxl) {
+            max-width: 861px;
+            
+      }
+
+            }
+		// .experience__content
+		&__content {
+            display: none;
+            // &:target {
+            //     display: block;
+            // }
+            &.active {
+                  display: block;
+            }
+      }
+		// .experience__content-title
+
+		&__content-title {
+            padding: 30px 0 30px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: 700;
+            @media screen and (min-width: $breakpoint-md) {
+                  padding: 60px 0 30px;
+            }
+            @media screen and (min-width: $breakpoint-lg) {
+                  padding: 0 0 30px;
+            }
+            @media screen and (min-width: $breakpoint-xl) {
+                  
+      }
+		}
+
+		// .experience__content-text
+
+		&__content-text {
+            color: #fff;
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 30px;
+            @media screen and (min-width: $breakpoint-xl) {
+                  
+      }
+		}
+}

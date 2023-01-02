@@ -1,0 +1,139 @@
+
+.partners {
+    
+
+    // .partners__wrapper
+
+    &__wrapper {
+        @media screen and (min-width: $breakpoint-xxl) {
+        padding-bottom: 60px;
+        
+        }
+    }
+
+    // .partners__title
+
+    &__title {
+        padding: 80px 0 30px;
+        text-align:center;
+        color: $main_color;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        text-transform: uppercase;
+    }
+
+    // .partners__box
+
+    &__box {
+        display: flex;
+        flex-wrap: wrap;
+        
+        @media screen and (min-width: $breakpoint-xxl) {
+            border-radius: 12px;
+            overflow: hidden;
+            max-width: 1720px;
+            margin: 0 auto;
+    }
+}
+
+    // .partners__box-list
+
+    &__box-list {
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1 1 100%;
+        &:nth-child(n+7) {
+            display: none;
+        }
+        @media screen and (min-width: $breakpoint-md) {
+            &:nth-child(n+7) {
+                display: flex;
+            }
+            flex: 1 1 33.3%
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            flex: 1 1 25%;
+        }
+    }
+
+    // .partners__box-list--blue
+
+    &__box-list--blue {
+        background: #1C4280;
+    }
+
+    // .partners__box-icon
+
+    &__box-icon {
+        
+    }
+
+    // .partners__box-list--darkblue
+
+    &__box-list--darkblue {
+        background: #143646;
+    }
+
+    // .partners__box-list--orange
+
+    &__box-list--orange {
+        background: #F48B30;
+    }
+
+    // .partners__box-list--darkpink
+
+    &__box-list--darkpink {
+        background: #9E4DC3;
+    }
+
+    // .partners__box-list--lightorange
+
+    &__box-list--lightorange {
+        background: #FD9339;
+    }
+
+    // .partners__box-list--grey
+
+    &__box-list--grey {
+        background: #E2E2E4;
+    }
+
+    // .partners__box-list--red
+
+    &__box-list--red {
+        background: #C71C36;
+    }
+
+    // .partners__box-list--lightblue
+
+    &__box-list--lightblue {
+        background: #DCF3F9;
+    }
+
+    // .partners__box-list--whitesmoke
+
+    &__box-list--whitesmoke {
+        background: #EAEAEA;
+    }
+
+    // .partners__box-list--violet
+
+    &__box-list--violet {
+        background: #282240;
+    }
+
+    // .partners__box-list--ocean
+
+    &__box-list--ocean {
+        background: #1D4568;
+    }
+
+    // .partners__box-list--black
+
+    &__box-list--black {
+        background: #000;
+    }
+}

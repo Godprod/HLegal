@@ -1,0 +1,137 @@
+
+.servises {
+padding-bottom: 60px;
+    // .servises__container-servises
+
+    &__container-servises {
+    }
+
+    // .servises__txt
+
+    &__txt {
+        display: inline-block;
+        position: relative;
+        color: $regular_color;
+        margin: 0 0 10px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        cursor: pointer;
+        text-decoration: none;
+        text-transform: uppercase;
+        
+        &:hover {
+            @include red_text;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 6.5px;
+            left: 74px;
+            border-top: 2px solid $regular_color;
+            width: 6px;
+            transform: rotate(-45deg);
+            
+        }
+        &:hover::before, &:hover::after {
+            border-top: 2px solid $accent_color;
+            border-bottom: $accent_color;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 2.5px;
+            left: 74px;
+            border-bottom: 2px solid $regular_color;
+            width: 6px;
+            transform: rotate(45deg);
+        }
+    }
+
+    // .servises__title
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        @include gradient_text;
+        line-height: 39px;
+    }
+
+    &__title-second-page {
+        margin-top: 30px;
+        @media screen and (min-width: $breakpoint-md) {
+            margin-top: 60px;
+        }
+    }
+}
+
+.box {
+
+    
+
+    // .box__card
+
+    &__card {
+        @media screen and (min-width: $breakpoint-md) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+    // .box__card-list
+
+    &__card-list {
+        flex-direction: column;
+        padding-top: 30px;
+        @media screen and (min-width: $breakpoint-md) {
+        flex: 1 1 44%;
+        padding-top: 60px;
+        &:nth-child(n+3) {
+            padding: 0;
+        }
+        }
+        @media screen and (min-width: $breakpoint-lg) {
+            flex: 1 1 28%;
+            &:nth-child(3) {
+                padding-top: 60px;
+            }
+        }
+    }
+
+    // .box__card-img
+
+    &__card-img {
+        width: 92px;
+        height: 92px;
+        fill: #fff;
+        display: flex;
+    }
+
+    // .box__card-title
+
+    &__card-title {
+        display: inline-flex;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 29px;
+        color: $regular_color;
+        margin: 30px 0 15px;
+        &:hover {
+            color: $accent_color;
+        }
+    }
+
+    // .box__card-txt
+
+    &__card-txt {
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #fff;
+    }
+
+}
+

@@ -1,0 +1,141 @@
+
+.swiper-slide {
+	 
+		padding: 60px 0;
+		
+	
+}
+
+.team {
+	font-weight: 400;
+	background: #fff;
+	position: relative;
+	
+
+	&__swiper {
+		
+	}
+
+	&__wrapper {
+		
+	}
+
+	&__slide {
+		
+		border-radius: 12px;
+		overflow: hidden;
+		@media screen and (min-width: 1024px) {
+			display: flex;
+		}
+	}
+
+	&__image {
+		height: 500px;
+		position: relative;
+		img {
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		@media screen and (min-width: 1024px) {
+			height: auto;
+			flex: 1 0 400px;
+		}
+	}
+
+	// &__image {
+	// 	height: 500px;
+	// 	background: url('../images/image.png') no-repeat center/cover;
+	// 	@media screen and (min-width: 1024px) {
+	// 		height: auto;
+	// 		flex: 1 0 400px;
+	// 	}
+	// }
+
+	&__inner {
+		background: $bg_color;
+		padding: 30px;
+	}
+
+	&__inner-link {
+        color: $regular_color;
+        font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		text-decoration: none;
+		line-height: 17px;
+		margin-bottom: 30px;
+        position: relative;
+        &:hover {
+            @include red_text;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 6.5px;
+            left: 82px;
+            border-top: 2px solid $regular_color;
+            width: 6px;
+            transform: rotate(-45deg);
+            
+        }
+        &:hover::before, &:hover::after {
+            border-top: 2px solid $accent_color;
+            border-bottom: $accent_color;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 2.5px;
+            left: 82px;
+            border-bottom: 2px solid $regular_color;
+            width: 6px;
+            transform: rotate(45deg);
+        }
+	}
+
+	&__inner-title {
+        margin-top: 5px;
+		font-weight: 700;
+		font-size: 38px;
+		line-height: 47px;
+		margin-bottom: 30px;
+        @include gradient_text;
+	}
+
+	&__inner-name {
+		color: $text_color;
+		p {
+			margin-bottom: 6px;
+            line-height: 20px;
+            font-weight: 700;
+		}
+		p+p {
+			font-weight: 400;
+			font-size: 14px;
+            line-height: 22px;
+		}
+	}
+
+	&__swiper-pagination {
+		bottom: 20px;
+		&.swiper-pagination {
+			bottom: 10px;
+		}
+
+		.swiper-pagination-bullet {
+			width: 18px;
+			height: 18px;
+            background: $regular_color;
+            opacity: 0.2;
+			&.swiper-pagination-bullet-active {
+				background: $regular_color;
+                opacity: 1;
+			}
+		}
+
+	}
+}
